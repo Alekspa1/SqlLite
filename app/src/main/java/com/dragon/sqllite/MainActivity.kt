@@ -29,6 +29,13 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+
+    }
+    fun saveDate(curent: String, description: String ){
+        val edit = pref.edit()
+        edit.putString("curent", curent)
+        edit.putString("description", description)
+        edit.apply()
     }
 }
 
