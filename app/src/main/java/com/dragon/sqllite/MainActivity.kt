@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         binding.tvText.text = pref.getString("curent", "")
-        binding.textView.text = pref.getString("description", "") // пппппп
+        binding.textView.text = pref.getString("description", "")
         binding.button.setOnClickListener {
             val curent = binding.editTextText.text.toString()
             val description = binding.editTextText2.text.toString()
@@ -27,9 +27,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-
-
-
+    }
 }
     fun saveDate(curent: String, description: String ){
         val edit = pref.edit()
