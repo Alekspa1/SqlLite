@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var pref: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
 
-        pref = getSharedPreferences("TABLE", Context.MODE_PRIVATE) // инициализировал базу данных
+        pref = getSharedPreferences("TABLE", Context.MODE_PRIVATE)
         binding = ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
