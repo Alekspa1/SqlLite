@@ -17,6 +17,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
+        binding.tvText.text = pref.getString("curent", "")
+        binding.textView.text = pref.getString("description", "") // пппппп
+        binding.button.setOnClickListener {
+            val curent = binding.editTextText.text.toString()
+            val description = binding.editTextText2.text.toString()
+            saveDate(curent, description)
+            binding.tvText.text = curent
+            binding.textView.text = description
+
         }
 
 
